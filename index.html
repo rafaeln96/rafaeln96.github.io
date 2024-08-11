@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Market List Project</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1>MARKET LIST</h1>
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Calculadora</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                </ul>
+            </div>
+
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt="Menu Icon"></button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="market-list-section">
+            <h2>Adicionar Item à Lista de Mercado</h2>
+            <form id="market-list-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="item-name">Nome do Item:</label>
+                        <input type="text" id="item-name" name="item-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="item-quantity">Quantidade:</label>
+                        <select id="item-quantity" name="item-quantity" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <!-- As opções de 1 a 100 serão geradas via JavaScript -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="item-price">Valor (R$):</label>
+                        <input type="number" id="item-price" name="item-price" step="0.10" min="0" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit">Adicionar Item</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="item-display-section">
+            <h2>Itens Adicionados</h2>
+            <div id="item-list"></div>
+        </section>
+
+        <section class="total-display-section">
+            <h2>Valor Total de suas Compras: <span id="total-value">R$ 0,00</span></h2>
+        </section>
+    </main>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
